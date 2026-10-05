@@ -1,0 +1,34 @@
+{
+  "name": "music-player-doubly-linked-list",
+  "version": "1.0.0",
+  "description": "Taller Reproductor de Música - Listas Dobles. Interactive 3D Doubly Linked List Music Player Workshop.",
+  "private": true,
+  "workspaces": [
+    "frontend",
+    "backend"
+  ],
+  "scripts": {
+    "dev": "npm --prefix frontend run dev",
+    "dev:frontend": "npm --prefix frontend run dev",
+    "dev:backend": "npm --prefix backend run dev",
+    "build": "npm --prefix frontend run build && npm --prefix backend run build",
+    "build:frontend": "npm --prefix frontend run build",
+    "build:backend": "npm --prefix backend run build",
+    "start": "npm --prefix backend run start",
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.3",
+    "vitest": "^2.1.8"
+  },
+  "keywords": [
+    "doubly-linked-list",
+    "threejs",
+    "typescript",
+    "music-player",
+    "educational",
+    "data-structures"
+  ],
+  "author": "Santiago",
+  "license": "MIT"
+}

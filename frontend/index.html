@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Taller interactivo de estructuras de datos: Reproductor de Música con Listas Doblemente Enlazadas y visualización espacial 3D."
+    />
+    <title>Taller Reproductor de Música - Listas Dobles</title>
+    <link rel="icon" type="image/svg+xml" href="/assets/covers/cover_default.png" />
+    <link rel="stylesheet" href="/src/styles/index.css" />
+    <link rel="stylesheet" href="/src/styles/components.css" />
+  </head>
+  <body>
+    <div id="app">
+      <!-- Top Navigation Header -->
+      <header class="app-header">
+        <div class="brand-section">
+          <div class="brand-logo-glow">⚡</div>
+          <div>
+            <h1 class="brand-title">Taller Reproductor de Música</h1>
+            <div class="brand-subtitle">Laboratorio de Listas Doblemente Enlazadas</div>
+          </div>
+        </div>
+
+        <!-- Global Search Bar -->
+        <div class="search-container">
+          <span class="search-icon">🔍</span>
+          <input
+            type="text"
+            id="search-input"
+            class="search-input"
+            placeholder="Buscar por canción, artista o álbum..."
+            aria-label="Buscar canción"
+          />
+        </div>
+
+        <!-- Header Actions -->
+        <div class="header-actions">
+          <button id="btn-open-playlists" class="btn-secondary-glow" title="Gestionar e importar playlists">
+            📂 Playlists
+          </button>
+          <button id="btn-open-upload" class="btn-primary-glow" title="Agregar nueva canción a la lista doble">
+            ➕ Agregar Canción
+          </button>
+          <button id="btn-reset-cam" class="btn-secondary-glow" title="Restablecer vista de cámara 3D">
+            🎯 Enfocar
+          </button>
+        </div>
+      </header>
+
+      <!-- Main 3D Viewport & Overlay Container -->
+      <main id="viewport-container">
+        <!-- 3D Canvas Element -->
+        <div id="three-canvas-container"></div>
+
+        <!-- Overlaid Interactive Panes -->
+        <div class="ui-overlay-container">
+          <!-- Left Drawer: Playlist View -->
+          <div id="playlist-drawer" class="playlist-drawer">
+            <button id="playlist-drawer-toggle" class="playlist-toggle-tab" title="Abrir / Ocultar panel de lista">
+              ☰
+            </button>
+            <div id="playlist-view-container" style="height: 100%;"></div>
+          </div>
+
+          <!-- Educational Diagnosis Panel (Bottom/Right) -->
+          <div id="edu-panel-container" class="educational-panel-container"></div>
+
+          <!-- 3D Controls Helper Hint -->
+          <div class="controls-hint">
+            <span>🖱️ Arrastrar: Orbitar 3D</span>
+            <span>•</span>
+            <span>🔍 Rueda: Zoom</span>
+            <span>•</span>
+            <span>👆 Clic: Seleccionar Nodo</span>
+          </div>
+        </div>
+      </main>
+
+      <!-- Bottom Audio Player Bar -->
+      <footer id="player-bar-container" class="player-bar-container"></footer>
+    </div>
+
+    <!-- Modals Host Container -->
+    <div id="modal-container"></div>
+
+    <!-- Toast Notifications Host Container -->
+    <div id="toast-container"></div>
+
+    <!-- Main TypeScript Entrypoint -->
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
